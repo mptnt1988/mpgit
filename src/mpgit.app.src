@@ -1,15 +1,16 @@
 {application, mpgit,
- [{description, "An OTP library"},
-  {vsn, "0.1.0"},
+ [{description, "A library for git."},
+  {vsn, "0.0.1"},
   {registered, []},
   {applications,
    [kernel,
-    stdlib
+    stdlib,
+    lager
    ]},
   {env,[]},
   {modules, []},
 
-  {maintainers, []},
+  {maintainers, [mptnt1988]},
   {licenses, ["Apache 2.0"]},
   {links, []}
  ]}.

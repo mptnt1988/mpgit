@@ -1,0 +1,8 @@
+:name "mpgit"
+:node-sname "mpgit"
+:lib-dirs '(".")
+:start-command "erl -sname mpgit -pa \
+_build/default/lib/lager/ebin \
+_build/default/lib/goldrush/ebin \
+_build/default/lib/mpgit/ebin \
+"
