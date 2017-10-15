@@ -1,7 +1,7 @@
 mpgit
 =====
 
-An OTP library
+A library for git commands.
 
 Build
 -----
