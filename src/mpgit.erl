@@ -1,21 +1,15 @@
 -module(mpgit).
--compile(export_all).
 
 %% API exports
--export([]).
+-export([get_current_branch/0]).
 
 %%====================================================================
 %% API functions
 %%====================================================================
-test() ->
-    lager:debug("Tuan debug"),
-    lager:info("Tuan info"),
-    lager:notice("Tuan notice"),
-    lager:warning("Tuan warning"),
-    lager:error("Tuan error"),
-    lager:critical("Tuan critical"),
-    lager:alert("Tuan alert"),
-    lager:emergency("Tuan emergency").
+get_current_branch() ->
+    Branch = mpgit_lib:get_current_branch(),
+    lager:info("mpgit:get_current_branch/0 returns ~p~n", [Branch]),
+    Branch.
 
 %%====================================================================
 %% Internal functions
