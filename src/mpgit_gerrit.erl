@@ -13,7 +13,9 @@ review(Config, Actions, CommitID)
     ActionList = build_action_list(Actions),
     Prepend = ["-p", Port, Host, "gerrit review", "--project", Project],
     Append = [CommitID],
-    run(Prepend ++ ActionList ++ Append).
+    WordList = Prepend ++ ActionList ++ Append,
+    CmdStr = lists:flatten(lists:join(" ", ["ssh"|WordList])),
+    os_cmd(CmdStr).
 
 %%==============================================================================
 %% Internal functions
@@ -38,6 +40,5 @@ build_action_list([{message, Str}|T], Acc) ->
     build_action_list(T, ["--message", Str | Acc]);
 build_action_list([], Acc) -> Acc.
 
-run(WordList) ->
-    Cmd = lists:flatten(lists:join(" ", ["ssh"|WordList])),
-    {Cmd, string:trim(os:cmd(Cmd))}.
+os_cmd(Str) ->
+    string:trim(os:cmd(Str)).

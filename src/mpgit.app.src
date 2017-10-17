@@ -1,16 +1,10 @@
-{application, mpgit,
- [{description, "A library for git commands."},
-  {vsn, "0.1.0"},
-  {registered, []},
-  {applications,
-   [kernel,
-    stdlib,
-    lager
-   ]},
-  {env,[]},
-  {modules, []},
-
-  {maintainers, ["Tuan Tran"]},
-  {licenses, ["Apache 2.0"]},
-  {links, [{"GitHub", "https://github.com/mptnt1988/mpgit"}]}
- ]}.
+{application,mpgit,
+             [{description,"A library for git commands."},
+              {vsn,"0.1.1"},
+              {registered,[]},
+              {applications,[kernel,stdlib,lager]},
+              {env,[]},
+              {modules,[]},
+              {maintainers,["Tuan Tran"]},
+              {licenses,["Apache 2.0"]},
+              {links,[{"GitHub","https://github.com/mptnt1988/mpgit"}]}]}.

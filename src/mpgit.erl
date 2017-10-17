@@ -1,7 +1,9 @@
 -module(mpgit).
 
 %% API exports
--export([get_current_branch/0]).
+-export([get_current_branch/0,
+         gerrit_review/3
+        ]).
 
 %%====================================================================
 %% API functions
